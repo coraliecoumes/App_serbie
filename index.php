@@ -1,1 +1,1 @@
-<?php include_once("core-map-en.HTML"); ?>
+<?php include_once("core-map-en.html"); ?>
