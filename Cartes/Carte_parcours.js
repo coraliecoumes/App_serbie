@@ -79,7 +79,7 @@ mapMarkers = [];
                   }
                 else {dessin = false ;}
             });
-            layer.on('mouseover', function(){
+            layer.on('touchmove', function(){
               if(dessin == true){
                     this.setStyle({
                     color: 'red',
