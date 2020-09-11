@@ -58,7 +58,7 @@ mapMarkers = [];
         onEachFeature: function (feature, layer) {
             var defaultStyle = layer.style;
             
-            layer.on('click',function(e){ 
+            layer.on('touchstart',function(e){ 
               for(var i = 0; i < mapMarkers.length & mapMarkers.length>1; i++){
                       map.removeLayer(mapMarkers[i]);
                   }
@@ -96,7 +96,7 @@ mapMarkers = [];
               }
             });
 
-            layer.on('mouseup',function(e){
+            layer.on('touchend',function(e){
               //L.marker(e.latlng,{icon: greenIcon}).addTo(markerGroup);
               var mean_water = 0;
               var mean_rurality = 0;
