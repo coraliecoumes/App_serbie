@@ -58,7 +58,7 @@ mapMarkers = [];
         onEachFeature: function (feature, layer) {
             var defaultStyle = layer.style;
             
-            layer.on('touchstart touchend',function(e){ 
+            layer.on('click',function(e){ 
               for(var i = 0; i < mapMarkers.length & mapMarkers.length>1; i++){
                       map.removeLayer(mapMarkers[i]);
                   }
