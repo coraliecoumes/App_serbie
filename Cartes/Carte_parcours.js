@@ -79,7 +79,7 @@ mapMarkers = [];
                   }
                 else {dessin = false ;}
             });
-            layer.on('touchmove', function(){
+            layer.on('touchlist', function(){
               if(dessin == true){
                     this.setStyle({
                     color: 'red',
