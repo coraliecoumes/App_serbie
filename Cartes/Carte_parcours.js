@@ -47,9 +47,6 @@ $.getJSON('https://raw.githubusercontent.com/coraliecoumes/serbie/master/SRB_roa
   }).addTo(map);
 });
 
-if (L.Browser.touch) {
-      L.control.touchHover().addTo(map);
-    }
 var dessin = false;
 var cells = [];
 var mean_mean=0;
