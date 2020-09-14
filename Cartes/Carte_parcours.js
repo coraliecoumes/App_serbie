@@ -47,6 +47,9 @@ $.getJSON('https://raw.githubusercontent.com/coraliecoumes/serbie/master/SRB_roa
   }).addTo(map);
 });
 
+if (L.Browser.touch) {
+      L.control.touchHover().addTo(map);
+    }
 var dessin = false;
 var cells = [];
 var mean_mean=0;
@@ -79,7 +82,7 @@ mapMarkers = [];
                   }
                 else {dessin = false ;}
             });
-            layer.on('touchlist', function(){
+            layer.on('mouseover', function(){
               if(dessin == true){
                     this.setStyle({
                     color: 'red',
@@ -96,7 +99,7 @@ mapMarkers = [];
               }
             });
 
-            layer.on('touchend',function(e){
+            layer.on('mouseup',function(e){
               //L.marker(e.latlng,{icon: greenIcon}).addTo(markerGroup);
               var mean_water = 0;
               var mean_rurality = 0;
